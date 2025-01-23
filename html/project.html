@@ -1,0 +1,239 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+    <style>
+        /* General Styles */
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #1a1a2e; /* Dark navy blue */
+            color: white;
+        }
+
+        .header {
+            background-color: #0f3460; /* Slightly lighter navy shade */
+            padding: 10px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 10;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+        }
+
+        .header .logo {
+            font-size: 24px;
+            color: white;
+        }
+
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            margin-left: 20px;
+            font-size: 18px;
+        }
+
+        .navbar a:hover {
+            color: #e94560; /* Coral pink */
+        }
+
+        .home {
+            padding: 20px 10%;
+        }
+
+        .pro1, .pro2 {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+            background-color: #ffcc00; /* Golden yellow */
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+            overflow: hidden;
+            padding: 20px;
+        }
+        
+        .pro1-img, .pro2-img {
+            flex: 1;
+            text-align: center;
+        }
+
+        .pro1-img img, .pro2-img img {
+            max-width: 100%;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        }
+
+        .pro1-text, .pro2-text {
+            flex: 2;
+            padding-left: 20px;
+            color: #1a1a2e; /* Navy blue for text inside boxes */
+        }
+
+        .pro1-text h4, .pro2-text h4 {
+            color: #1a1a2e; /* Navy blue for project titles */
+            font-size: 20px;
+            margin-bottom: 10px;
+        }
+
+        .pro1-text h6, .pro2-text h6 {
+            color: #1a1a2e; /* Navy blue for subheadings */
+            font-size: 16px;
+            margin-bottom: 10px;
+        }
+
+        .pro1-text p, .pro2-text p {
+            font-size: 14px;
+            line-height: 1.8;
+        }
+        
+/* Apply Animations */
+.pro1, .pro2 {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    background-color: #ffcc00; /* Golden yellow */
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+    padding: 20px;
+    animation: slideright 1s ease-in-out; /* Added animation */
+}
+.navbar{
+    animation: zoomin 1s ease-in-out;
+    animation: slideright 1s ease-in-out;
+}
+.pro1-img img, .pro2-img img {
+    max-width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    animation: zoomin 1s ease-in-out; /* Added animation */
+}
+
+.pro1-text, .pro2-text {
+    flex: 2;
+    padding-left: 20px;
+    color: #1a1a2e; /* Navy blue for text inside boxes */
+    animation: slidetop 1s ease-in-out; /* Added animation */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .pro1, .pro2 {
+        flex-direction: column;
+        padding: 15px;
+    }
+    .navbar a {
+        font-size: 16px;
+        margin-left: 20px;
+    }
+    .header {
+        padding: 15px 5%;
+    }
+
+    .pro1-img, .pro2-img, .pro3-img,
+    .pro1-text, .pro2-text, .pro3-text {
+        flex: 1 1 100%;
+    }
+
+    .pro1-text h4, .pro2-text h4, .pro2-text h4 {
+        font-size: 20px;
+    }
+
+    .pro1-text h6, .pro2-text h6, .pro2-text h6 {
+        font-size: 16px;
+    }
+
+    .pro1-text p, .pro2-text p, .pro2-text p {
+        font-size: 14px;
+    }
+}
+
+/* Animations */
+@keyframes slideright {
+    0% {
+        transform: translateX(-100px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slidetop {
+    0% {
+        transform: translateY(100px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes zoomin {
+    0% {
+        transform: scale(0);
+        opacity: 0;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+    </style>
+</head>
+<body>
+    <header class="header">
+        <a href="#" class="logo">Portfolio</a>
+        <nav class="navbar">
+            <a href="index.html" style="--i:1;" class="active">Home</a>
+            <a href="about.html" style="--i:2;">About</a>
+            <a href="Skills.html" style="--i:3;">Skills</a>
+            <a href="project.html" style="--i:4;">Projects</a>
+            <a href="contact.html" style="--i:5;">Contact</a>
+        </nav>
+    </header>
+    <section class="home">
+        <div class="pro1">
+            <div class="pro1-img">
+                <a href= "https://github.com/Muthupalani/Resume_Checker" target="_blank"><img src="C:\Users\muthu\OneDrive\ドキュメント\project\portfolio - new\images\res.jpg" alt="AI-Powered Resume Analyzer"></a>
+            </div>
+            <div class="pro1-text">
+                <h4>1. AI-Powered Resume Analyzer</h4>
+                <h6>Python, Flask, HTML, CSS, JavaScript</h6>
+                <p>Developed an AI-powered resume evaluation system with 85% accuracy using NLP and machine learning to analyze resumes and match them with job roles. Streamlined the recruitment process, automating resume screening and reducing manual effort by 40%.</p>
+            </div>
+        </div>
+        <div class="pro2">
+            <div class="pro2-img">
+                <a href= "https://github.com/Muthupalani/Vehicle-Routing-Problem" target="_blank"><img src="C:\Users\muthu\OneDrive\ドキュメント\project\portfolio - new\images\vr.jpg" alt="Vehicle Routing Problem"></a>
+            </div>
+            <div class="pro2-text">
+                <h4>2. Vehicle Routing Problem Optimization</h4>
+                <h6>Python, DEAP, Matplotlib</h6>
+                <p>Developed a solution to the Vehicle Routing Problem using genetic algorithms, achieving a 28.20% reduction in delivery distance. Improved multi-objective optimization and logistics problem-solving skills.</p>
+            </div>
+        </div>
+        <div class="pro1">
+            <div class="pro1-img">
+                <a href="https://github.com/Muthupalani/sign-language-detection-python" target="blank">
+                <img src="pro3.png" alt="Sign Language Detection"></a>
+            </div>
+            <div class="pro1-text">
+                <h4>3. Sign Language Detection</h4>
+                <h6>Python, OpenCV, TensorFlow</h6>
+                <p>Built a real-time sign language detection system to improve communication for hearing-impaired individuals. Processed large datasets to enhance model accuracy and applied machine learning techniques for optimized real-time classification.</p>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
